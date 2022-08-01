@@ -2,36 +2,10 @@
 #define LIBB_H
 #include <liba.h>
 
-class LIBB_PUBLIC LibB:public LibA<int>
+class LIBB_PUBLIC LibB_long:public LibA_template<long>
 {
 public:
-    LibB();
-    static int nextValueFromB();
-    static  inline int nextValueFromBInline()
-    {
-        return nextValueFromA();
-    }
-    static unsigned short nextTValueFromB();
-    template<typename T>
-    static inline T nextTValueFromBInline()
-    {
-        return nextTValueFromA<T>();
-    }
-};
-class LIBB_PUBLIC LibB_Long:public LibA_Long
-{
-public:
-    static int nextValueFromB();
-    static inline int nextValueFromBInline()
-    {
-        return nextValueFromA();
-    }
-    static unsigned short nextTValueFromB();
-    template<typename T>
-    static T nextTValueFromBInline()
-    {
-        return nextTValueFromA<T>();
-    }
+    LibB_long(){}
 };
 
 #endif // LIBB_H

@@ -19,20 +19,15 @@
 #endif
 
 template<typename T>
-class LibA
+class LibA_template
 {
 public:
-    LibA()
+    LibA_template()
     {
 
     }
-    static T nextValueFromA()
-    {
-        static T counter=0;
-        return counter++;
-    }
     template<typename T1>
-    static T1 nextTValueFromA()
+    static T1 incCounter()
     {
         static T1 counter=0;
         return counter++;
@@ -40,9 +35,31 @@ public:
 private:
     T val;
 };
-class LIBA_PUBLIC LibA_Long:public LibA<long>
+class LIBA_PUBLIC LibA_long:public LibA_template<long>
 {
 public:
-    LibA_Long();
+    LibA_long();
+    static short test_incCounter_short();
 };
+
+
+class LIBA_PUBLIC LibA
+{
+public:
+    LibA()
+    {
+
+    }
+    template<typename T1>
+    static T1 incCounter()
+    {
+        static T1 counter=0;
+        return counter++;
+    }
+    static short test_incCounter_short();
+private:
+    long val;
+};
+
+
 #endif // LIBA_H
