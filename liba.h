@@ -26,9 +26,9 @@ public:
     {
 
     }
-    static int nextValueFromA()
+    static T nextValueFromA()
     {
-        static int m_counter=0;
+        static T m_counter=0;
         return m_counter++;
     }
 private:
