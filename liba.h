@@ -28,8 +28,14 @@ public:
     }
     static T nextValueFromA()
     {
-        static T m_counter=0;
-        return m_counter++;
+        static T counter=0;
+        return counter++;
+    }
+    template<typename T1>
+    static T1 nextTValueFromA()
+    {
+        static T1 counter=0;
+        return counter++;
     }
 private:
     T val;

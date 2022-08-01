@@ -11,6 +11,12 @@ public:
     {
         return nextValueFromA();
     }
+    static unsigned short nextTValueFromB();
+    template<typename T>
+    static inline T nextTValueFromBInline()
+    {
+        return nextTValueFromA<T>();
+    }
 };
 class LIBB_PUBLIC LibB_Long:public LibA_Long
 {
@@ -19,6 +25,12 @@ public:
     static inline int nextValueFromBInline()
     {
         return nextValueFromA();
+    }
+    static unsigned short nextTValueFromB();
+    template<typename T>
+    static T nextTValueFromBInline()
+    {
+        return nextTValueFromA<T>();
     }
 };
 
