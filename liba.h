@@ -19,10 +19,10 @@
 #endif
 
 template<typename T>
-class LibA_template
+class TestClass_template
 {
 public:
-    LibA_template()
+    TestClass_template()
     {
 
     }
@@ -35,18 +35,18 @@ public:
 private:
     T val;
 };
-class LIBA_PUBLIC LibA_long:public LibA_template<long>
+class LIBA_PUBLIC TestClass_long:public TestClass_template<long>
 {
 public:
-    LibA_long();
+    TestClass_long();
     static short test_incCounter_short();
 };
 
 
-class LIBA_PUBLIC LibA
+class LIBA_PUBLIC TestClass
 {
 public:
-    LibA()
+    TestClass()
     {
 
     }

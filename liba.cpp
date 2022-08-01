@@ -1,13 +1,13 @@
 #include "liba.h"
-LibA_long::LibA_long()
+TestClass_long::TestClass_long()
 {
 
 }
-short LibA_long::test_incCounter_short()
+short TestClass_long::test_incCounter_short()
 {
     return incCounter<short>();
 }
-short LibA::test_incCounter_short()
+short TestClass::test_incCounter_short()
 {
     return incCounter<short>();
 }
